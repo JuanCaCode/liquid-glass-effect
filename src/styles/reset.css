@@ -1,0 +1,110 @@
+/* Reset CSS - Global Styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background: #fff;
+    color: #000;
+    font-family: 'sans-serif', Arial, Helvetica, sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, select, textarea {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input{
+    height: 50px;
+    width: 100%;
+    padding: 1rem 1.6rem;
+    border-radius: 1.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    &:hover{
+    padding: 1.9rem 2rem;
+    }
+    &::placeholder{
+        color: white;
+    }
+}
+
+.button{
+    height: 50px;
+    width: 100%;
+    padding: 1rem 1.6rem;
+    border-radius: 1.8rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 2rem 2rem;
+    }
+    &:active{
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 2.1rem 2.1rem;
+    }
+}
