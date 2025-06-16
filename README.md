@@ -121,13 +121,6 @@ Any inline styles like `border-radius`, `box-shadow`, etc. applied to the `.liqu
 
 ---
 
-## 📸 Visual Preview (optional)
-
-> You can add a GIF or screenshot here to showcase the effect. Recommended dimensions: 1200x600
-
-```md
-![Liquid Glass Effect Demo](./assets/demo.png)
-```
 
 ---
 
