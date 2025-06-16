@@ -9,6 +9,8 @@
 > ✨ A lightweight React library for applying a dynamic liquid glass visual effect to any HTML element via a simple CSS class — with no external dependencies.
 
 
+![image](https://github.com/user-attachments/assets/0871e497-7d96-4d2d-907b-7316f9b62326)
+
 <!-- Agregar agradecimiento a lucasromerodb por crear los efectos de svg y los estilos necsarios este es el enlace del repo:-->
 
 ## 🙏 Acknowledgements
