@@ -1,5 +1,5 @@
 
-# 🧊 Liquid Glass Effect
+# 🧊 React Liquid Glass Effect
 
 ![Version](https://img.shields.io/npm/v/liquid-glass-effect.svg)
 ![License](https://img.shields.io/npm/l/liquid-glass-effect)
@@ -23,13 +23,13 @@ A special thanks to [Lucas Romero](https://github.com/lucasromerodb/liquid-glass
 ## 📦 Installation
 
 ```bash
-npm install liquid-glass-effect
+npm install react-liquid-glass-effect
 ```
 
 Or using Yarn:
 
 ```bash
-yarn add liquid-glass-effect
+yarn add react-liquid-glass-effect
 ```
 
 ---
@@ -41,7 +41,7 @@ yarn add liquid-glass-effect
 This enables automatic detection and enhancement of all elements with the `liquid-glass` class.
 
 ```tsx
-import { LiquidGlassProvider } from 'liquid-glass-effect';
+import { LiquidGlassProvider } from 'react-liquid-glass-effect';
 
 const Root = () => (
   <LiquidGlassProvider>
