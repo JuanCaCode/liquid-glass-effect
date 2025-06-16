@@ -1,0 +1,69 @@
+.glass__container{
+    position: relative;
+    display: flex;
+    overflow: hidden !important;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    box-shadow:
+     0 6px 6px rgba(0,0,0,0.2),
+     0 0 20px rgba(0,0,0,0.1);
+}
+
+
+.glass__effect{
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    inset: 0;
+    border-radius: inherit;
+    backdrop-filter: blur(4px);
+    filter: url(#glass-refraction);
+    isolation: isolate;
+}
+
+.glass__color {
+    position: absolute;
+    z-index: -1;
+    border-radius: inherit;
+    overflow: hidden;
+    background: rgba(255 255 255 / 0.1);
+    inset: 0;
+}
+
+.glass__shine {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    inset: 0px;
+    border-radius: inherit;
+    box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.4),
+        inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+/* EN TESTING PARA NO CREAR ELEMENTOS, SINO UTILIZAR LOS PSEUDOELEMENTOS */
+/* .glass__container::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    inset: 0;
+    border-radius: inherit;
+    backdrop-filter: blur(4px);
+    filter: url(#glass-refraction);
+    isolation: isolate;
+}
+
+.glass__container::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.4),
+        inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
+} */

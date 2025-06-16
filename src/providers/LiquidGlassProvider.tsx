@@ -1,17 +1,5 @@
 import { useEffect } from "react";
-import "../styles/main_liquid_glass.css";
-import { GlassSVGDefs } from "../utils/svgDefs.tsx";
-
-const copyInheritedStyles = (
-  source: HTMLElement,
-  target: HTMLElement,
-  properties: string[]
-) => {
-  const computed = window.getComputedStyle(source);
-  properties.forEach((prop) => {
-    target.style.setProperty(prop, computed.getPropertyValue(prop));
-  });
-};
+import { GlassSVGDefs } from "../utils/svgDefs";
 
 export function LiquidGlassProvider({
   children,
@@ -26,8 +14,7 @@ export function LiquidGlassProvider({
         // Evitar duplicar si ya tiene el contenedor
         if (el.classList.contains("liquid-glass-initialized")) return;
 
-        const wrapper = document.createElement("div");
-        wrapper.className = "glass__container";
+        el.classList.add("glass__container");
 
         const effect = document.createElement("div");
         effect.className = "glass__effect";
@@ -38,32 +25,10 @@ export function LiquidGlassProvider({
         const shine = document.createElement("div");
         shine.className = "glass__shine";
 
-        copyInheritedStyles(el as HTMLElement, wrapper, [
-          "border-radius",
-          "overflow",
-          "backdrop-filter",
-          "box-shadow",
-          "border",
-        ]);
-
-        [effect, color, shine].forEach((layer) => {
-          copyInheritedStyles(el as HTMLElement, layer, [
-            "border-radius",
-            "overflow",
-            "margin",
-            "margin-top",
-            "margin-bottom",
-            "margin-left",
-            "margin-right",
-          ]);
-        });
-
         el.classList.add("liquid-glass-initialized");
-        el.parentNode?.insertBefore(wrapper, el);
-        wrapper.appendChild(effect);
-        wrapper.appendChild(color);
-        wrapper.appendChild(shine);
-        wrapper.appendChild(el);
+        el.appendChild(effect);
+        el.appendChild(color);
+        el.appendChild(shine);
       });
     };
 

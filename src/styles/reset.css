@@ -87,6 +87,12 @@ button, input, select, textarea {
     }
 }
 
+.input-container{
+    width: 100%;
+    border-radius: 1.8rem;
+}
+
+
 .button{
     height: 50px;
     width: 100%;
@@ -108,3 +114,4 @@ button, input, select, textarea {
         padding: 2.1rem 2.1rem;
     }
 }
+

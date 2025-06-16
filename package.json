@@ -1,11 +1,13 @@
 {
   "name": "react-liquid-glass-effect",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Liquid glass visual Apple effect for React components using simple CSS and SVG filters.",
   "main": "dist/liquid-glass-effect.umd.js",
   "module": "dist/liquid-glass-effect.es.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -18,7 +20,16 @@
   },
   "license": "MIT",
   "author": "JuanCaCoder",
-  "keywords": ["react", "glass", "visual", "effect", "ui", "css", "svg", "blur"],
+  "keywords": [
+    "react",
+    "glass",
+    "visual",
+    "effect",
+    "ui",
+    "css",
+    "svg",
+    "blur"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/tuusuario/liquid-glass-effect"
