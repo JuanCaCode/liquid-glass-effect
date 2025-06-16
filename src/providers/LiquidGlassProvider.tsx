@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import "../styles/main_liquid_glass.css";
 import { GlassSVGDefs } from "../utils/svgDefs.tsx";
 
 const copyInheritedStyles = (
