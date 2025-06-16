@@ -38,6 +38,15 @@ yarn add liquid-glass-effect
 
 This enables automatic detection and enhancement of all elements with the `liquid-glass` class.
 
+```tsx
+import { LiquidGlassProvider } from 'liquid-glass-effect';
+
+const Root = () => (
+  <LiquidGlassProvider>
+    <App />
+  </LiquidGlassProvider>
+);
+```
 
 ### 2. Use the class `liquid-glass` anywhere
 
