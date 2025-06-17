@@ -1,0 +1,14 @@
+# Ignorar cosas de desarrollo
+src/
+.vscode/
+tests/
+.storybook/
+node_modules/
+dist/demo/
+*.log
+
+# Pero asegurarte de que NO ignore esto:
+!README.md
+!dist/
+!index.js
+!index.d.ts

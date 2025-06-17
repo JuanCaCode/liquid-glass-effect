@@ -32,7 +32,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tuusuario/liquid-glass-effect"
+    "url": "https://github.com/juancacode/liquid-glass-effect"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
