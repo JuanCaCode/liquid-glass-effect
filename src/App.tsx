@@ -1,10 +1,9 @@
-import ExampleComponent from "./components/ExampleComponent/ExampleComponent";
+import LoginExample from "./components/LoginExample/LoginExample";
 
 function App() {
   return (
     <>
-      {/* ejemplo de uso */}
-      <ExampleComponent />
+      <LoginExample />
     </>
   );
 }

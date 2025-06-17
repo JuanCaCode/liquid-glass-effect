@@ -1,0 +1,103 @@
+/**
+ * -----------------------------------------------------------------------------
+ * Glass Effect Stylesheet
+ * -----------------------------------------------------------------------------
+ * This file defines the main styles for the "liquid glass" effect.
+ * Each class is designed to be used as part of a hierarchical structure,
+ * enabling the composition of advanced visual effects using filters,
+ * shadows, and translucent colors.
+ *
+ * Classes:
+ * -----------------------------------------------------------------------------
+ * .glass__container
+ *   - Main container for the glass effect.
+ *   - Provides stacking context, size control, and smooth transitions.
+ *   - Includes shadow to add depth and highlight the glass effect.
+ *
+ * .glass__effect
+ *   - Child of the main container.
+ *   - Applies background blur (backdrop-filter) and custom SVG filter.
+ *   - Uses isolation to separate the stacking context of effects.
+ *
+ * .glass__color
+ *   - Child of the main container.
+ *   - Adds a translucent base color layer to simulate glass material.
+ *   - Uses background with opacity to allow effect layering.
+ *
+ * .glass__shine
+ *   - Child of the main container.
+ *   - Adds internal highlights using box-shadow to simulate light reflections.
+ *   - Enhances the perception of depth and realism of the glass effect.
+ *
+ * .glass__content
+ *   - Child of the main container.
+ *   - Ensures content inherits the size of the glass container.
+ *   - Facilitates integration of any child element within the effect.
+ *
+ * Best practices:
+ * -----------------------------------------------------------------------------
+ * - Use these classes hierarchically for maximum realism.
+ * - Keep the HTML structure clear and semantic.
+ * - Adjust blur, color, and shadow values according to the visual context.
+ * - Avoid excessive use of !important to maintain controlled specificity.
+ * - Test filter and backdrop-filter compatibility in target browsers.
+ *
+ * -----------------------------------------------------------------------------
+ */
+/* Original styles for the wrapper parent element */
+.glass__container{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    overflow: hidden !important;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    box-shadow:
+     0 6px 6px rgba(0,0,0,0.2),
+     0 0 20px rgba(0,0,0,0.1);
+}
+
+/* As a child of glass_container. Applies backdrop and svg effects that comes from the provider */
+.glass__effect{
+    width: inherit;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    border-radius: inherit;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    filter: url(#glass-refraction);
+    isolation: isolate;
+}
+
+/* As a child of glass_container. Applies the base color for all wrappers */
+.glass__color {
+    width: inherit;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    border-radius: inherit;
+    background: rgba(255 255 255 / 0.1);
+    inset: 0;
+}
+
+/* As a child of glass_container. Applies the border shines of the wrapper */
+.glass__shine {
+    width: inherit;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    border-radius: inherit;
+    inset: 0px;
+    box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.4),
+        inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* As a child of glass_container. Applies only the width and hight inherit */
+.glass__content {
+    width: inherit;
+    height: inherit;
+}
+
+

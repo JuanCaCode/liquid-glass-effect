@@ -7,12 +7,23 @@
     justify-content: center;
     margin: 0 auto;
     overflow: hidden;
-    background: url('https://s0.smartresize.com/wallpaper/615/188/HD-wallpaper-green-natural-scenery.jpg') center center;
+    /* background: url('https://s0.smartresize.com/wallpaper/615/188/HD-wallpaper-green-natural-scenery.jpg') center center; */
     background-color: rgba(0, 0, 0, 0.2);
     background-size: 100%;
     background-attachment: fixed;
     animation: move 20s linear infinite;
     background-blend-mode: overlay;
+}
+
+.video{
+    width: 100%;
+    height: 100dvh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    filter: blur(5px);
 }
 
 @keyframes move {
@@ -37,22 +48,27 @@
     gap: 20px;
 }
 
+.form__liquid_glass{
+    border-radius: 30px;
+}
+
 .form{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 3rem;
+    padding: 3rem 2rem;
     gap: 20px;
     border-radius: 30px;
     color: white;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     &:hover{
-        padding: 3rem 4rem;
+        padding: 4rem 3rem;
     }
 }
 
-.input_container{
+.input_group{
     width: 100%;
     display: flex;
     flex-direction: column;
