@@ -1,6 +1,6 @@
 {
   "name": "react-liquid-glass-effect",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Liquid glass visual Apple effect for React components using simple CSS and SVG filters.",
   "main": "dist/liquid-glass-effect.umd.js",
   "module": "dist/liquid-glass-effect.es.js",
