@@ -1,12 +1,12 @@
 
 # 🧊 React Liquid Glass Effect
 
-![Version](https://img.shields.io/npm/v/liquid-glass-effect.svg)
-![License](https://img.shields.io/npm/l/liquid-glass-effect)
-![Minified size](https://img.shields.io/bundlephobia/min/liquid-glass-effect)
+![Version](https://img.shields.io/npm/v/react-liquid-glass-effect.svg)
+![License](https://img.shields.io/npm/l/react-liquid-glass-effect)
+![Minified size](https://img.shields.io/bundlephobia/min/react-liquid-glass-effect)
 ![React](https://img.shields.io/badge/React-%5E18.0.0-blue?logo=react)
 
-> ✨ A lightweight React library for applying a dynamic liquid glass visual effect to any HTML element via a simple CSS class — with no external dependencies.
+> ✨ A lightweight React library for applying a dynamic liquid glass visual effect to any HTML element via a simple Wrapper — with no external dependencies.
 
 
 ![image](https://github.com/user-attachments/assets/0871e497-7d96-4d2d-907b-7316f9b62326)
@@ -36,7 +36,7 @@ yarn add react-liquid-glass-effect
 
 ## 🚀 Quick Start
 
-### 1. Wrap your app with the `LiquidGlassProvider`
+### 1. Wrap your App with the `LiquidGlassProvider`
 
 This enables automatic detection and enhancement of all elements with the `liquid-glass` class.
 
@@ -50,29 +50,40 @@ const Root = () => (
 );
 ```
 
-### 2. Use the class `liquid-glass` anywhere
+### 2. Import the CSS styles
+
+This can be done in your main CSS file or directly in your component file.
 
 ```tsx
-<div
-  className="liquid-glass"
-  style={{
-    borderRadius: '16px',
-    overflow: 'hidden',
-    border: '2px solid white'
-  }}
->
-  <p>Content with a liquid glass effect</p>
-</div>
+import 'react-liquid-glass-effect/dist/react-liquid-glass-effect.css';
+```
+
+
+### 3. Use the wrapper LiquidGlass to apply the effect
+
+LiquidGlass is a wrapper component that applies the liquid glass effect to its children. You can use it like this:
+
+```tsx
+import { LiquidGlass } from 'react-liquid-glass-effect';
+
+const Component = () => (
+  <LiquidGlass>
+    <p>Content with a liquid glass effect</p>
+  </LiquidGlass>
+);
 ```
 
 ---
 
 ## 🧠 What does `LiquidGlassProvider` do?
 
-- 🕵️ Scans the DOM for elements with the `liquid-glass` class
-- 🔄 Dynamically wraps them in a container with layered effects
-- 🎨 Copies styles like `border-radius`, `overflow`, `box-shadow`, and more
-- 👁️ Uses a `MutationObserver` to handle new dynamic elements in real-time
+- It wraps your application to provide context for the liquid glass effect.
+- Uses the SVG snippet to create the liquid glass effect.
+
+## 🧠 What does `LiquidGlass` do?
+
+- It creates a wrapper around your content.
+- Applies the liquid glass effect using CSS and SVG filters.
 
 ---
 
@@ -83,7 +94,7 @@ const Root = () => (
   <div class="glass__effect"></div>
   <div class="glass__color"></div>
   <div class="glass__shine"></div>
-  <div class="liquid-glass">Your content here</div>
+  <div class="glass__content">Your content here</div>
 </div>
 ```
 
@@ -98,10 +109,6 @@ const Root = () => (
 - 💅 Style encapsulation using pure CSS
 
 ---
-
-## 🎨 Style Inheritance
-
-Any inline styles like `border-radius`, `box-shadow`, etc. applied to the `.liquid-glass` element will be inherited by the wrapper and all internal visual layers, preserving your design intent.
 
 ---
 
@@ -143,6 +150,7 @@ PRs are welcome! If you have suggestions for improvements or want to help enhanc
 
 ---
 
+
 ## ⭐ Stay Connected
 
 If you enjoy this library, consider starring the repo, following the creator, or sharing your use case!
@@ -161,3 +169,5 @@ If you have any questions, suggestions, or just want to say hi, feel free to rea
 
 ## 📝 Changelog
 For detailed changes, please refer to the [CHANGELOG](./CHANGELOG.md).
+
+
