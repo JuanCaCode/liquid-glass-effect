@@ -86,6 +86,41 @@ const Component = () => (
 </div>
 ```
 
+## Custom CSS Classes
+You can customize the styles by overriding the following classes in your CSS file:
+```css
+.glass__container {
+  /* Styles for the container */
+  border-radius: 10px;
+}
+.glass__effect {
+  /* Styles for the liquid glass effect */
+  inset: 2;
+}
+.glass__color {
+  /* Styles for the color overlay */
+  background: rgba(55 227 90 / 0.1);
+}
+.glass__shine {
+  /* Styles for the shine effect */
+}
+.glass__content {
+  /* Styles for the content inside the glass effect */
+}
+```
+## LiquidGlass accepts div props for the main container
+You can pass any valid HTML attributes to the `LiquidGlass` component, such as `className`, `style`, etc. This allows you to easily customize the appearance and behavior of the glass effect.
+
+```tsx
+import { LiquidGlass } from 'react-liquid-glass-effect';
+
+const Component = () => (
+  <LiquidGlass className="custom-class" style={{ padding: '20px' }}>
+    <p>Content with a liquid glass effect</p>
+  </LiquidGlass>
+);
+```
+
 ---
 
 ## ✨ Features

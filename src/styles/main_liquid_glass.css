@@ -46,11 +46,10 @@
  */
 /* Original styles for the wrapper parent element */
 .glass__container{
-    width: 100%;
     position: relative;
     z-index: 2;
     display: flex;
-    overflow: hidden !important;
+    overflow: hidden;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     box-shadow:
@@ -60,7 +59,6 @@
 
 /* As a child of glass_container. Applies backdrop and svg effects that comes from the provider */
 .glass__effect{
-    width: inherit;
     position: absolute;
     z-index: -1;
     overflow: hidden;
@@ -73,7 +71,6 @@
 
 /* As a child of glass_container. Applies the base color for all wrappers */
 .glass__color {
-    width: inherit;
     position: absolute;
     z-index: -1;
     overflow: hidden;
@@ -84,7 +81,6 @@
 
 /* As a child of glass_container. Applies the border shines of the wrapper */
 .glass__shine {
-    width: inherit;
     position: absolute;
     z-index: -1;
     overflow: hidden;
@@ -94,10 +90,13 @@
         inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
 }
 
-/* As a child of glass_container. Applies only the width and hight inherit */
+/* As a child of glass_container*/
 .glass__content {
     width: inherit;
     height: inherit;
+    >*{
+        width: 100%;
+    }
 }
 
 

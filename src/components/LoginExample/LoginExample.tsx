@@ -20,7 +20,7 @@ const LoginExample = () => {
             <h1>Iniciar Sesión</h1>
             <div className={styles.input_group}>
               <label htmlFor='email'>Correo Electrónico:</label>
-              <LiquidGlass>
+              <LiquidGlass style={{ width: "100%" }}>
                 <input
                   className='input'
                   type='email'
@@ -31,7 +31,7 @@ const LoginExample = () => {
             </div>
             <div className={styles.input_group}>
               <label htmlFor='password'>Contraseña:</label>
-              <LiquidGlass>
+              <LiquidGlass style={{ width: "100%" }}>
                 <input
                   className='input'
                   type='password'
@@ -40,7 +40,7 @@ const LoginExample = () => {
                 />
               </LiquidGlass>
             </div>
-            <LiquidGlass style={{ marginTop: "10px" }}>
+            <LiquidGlass style={{ marginTop: "10px", width: "100%" }}>
               <button className='liquid-glass button'>Continuar</button>
             </LiquidGlass>
           </div>
